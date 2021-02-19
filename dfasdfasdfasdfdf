@@ -1,0 +1,93 @@
+[33mcommit 7f987e62c977171e8f673436fc6d40ef31464cfb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Ethan Diosana <danielrenendez@gmail.com>
+Date:   Fri Feb 19 11:46:31 2021 -0800
+
+    changed navbar name
+
+[33mcommit ecb103195e5407d427abe734cde459bfc67ca776[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ethan Diosana <danielrenendez@gmail.com>
+Date:   Fri Feb 19 11:31:02 2021 -0800
+
+    changed navbar name
+
+[33mcommit e0ad8a7e881c04feff8fb34450a86342a8f7f2fa[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Feb 16 14:54:34 2021 -0800
+
+    update to bootstrap 5 in index.html
+
+[33mcommit 5d73ee882625360cc4d06700a82fa0835389fbd0[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Fri Oct 16 09:16:50 2020 -0700
+
+    Update .gitignore
+    
+    added .DS_Store
+
+[33mcommit c66ecae4802622c658ff2991357e7ad4ed97b811[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Wed Oct 14 09:54:42 2020 -0700
+
+    Update index.html
+    
+    change bg-coffee to bg-dark; there is no style sheet in this template
+
+[33mcommit 49660b63e7b06b7b3af5a60020bd391fbf36ca8b[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Wed Oct 14 09:44:17 2020 -0700
+
+    Update index.html
+
+[33mcommit 89074191ad0ee5f77d7eb1916a1fa8ed85c7cbc7[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 17:04:34 2020 -0700
+
+    Create index.html
+    
+    created template with navbar only
+
+[33mcommit 244dab3e1d5057b85a5b372298cf9b83bcd5753c[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:47:36 2020 -0700
+
+    Update README.md
+
+[33mcommit b3c5289a6e02cbd21c6614ecddde23dd9a7e0c9c[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:46:20 2020 -0700
+
+    Create blah.css
+
+[33mcommit 691294776dee9ed30386229f75d92d82dcc920da[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:38:11 2020 -0700
+
+    Create blah.js
+
+[33mcommit 22840ed6bcb676756be36df626d10f0b1313beba[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:37:32 2020 -0700
+
+    Update README.md
+
+[33mcommit 27b5a5b99a35013d26af46e9fad1e451c3c2f446[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:37:01 2020 -0700
+
+    Update README.md
+    
+    created template
+
+[33mcommit 2515f88982ce86655b5789928da5ad507e4f0bc0[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 16:29:23 2020 -0700
+
+    Create blah.jpg
+    
+    created new file in images folder
+
+[33mcommit de64d6e55e64838bf52390808716bd7677560239[m
+Author: Carly Orr <carly_wong_orr@bcit.ca>
+Date:   Tue Oct 13 08:14:33 2020 -0700
+
+    Initial commit
