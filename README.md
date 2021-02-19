@@ -1,5 +1,7 @@
 ## My Web Application (Title)
 
+Name: Man Chuen Lee, Jeff P, Ethan D
+
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
