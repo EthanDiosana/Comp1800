@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Account Page</title>
+        <meta charset="utf-8">
+    </head>
+    <body id="body">
+        <div>
+            <div><h1>Your Account</h1></div>
+            <div><h3>Username</h3></div>
+            <div><p1 id="info1">EthanD</p1><input type="text" id="field1"><button id="button1a">Edit</button><button id="button1b">Done</button></div>
+            <div><h3>First Name</h3></div>
+            <div><p1 id="info2">Ethan</p1><input type="text" id="field2"><button id="button2a">Edit</button><button id="button2b">Done</button></div>
+            <div><h3>Last Name</h3></div>
+            <div><input type="text"><button>Edit</button></div>
+            <div>Email</div>
+            <div><input type="text"><button>Edit</button></div>
+            <div>Shipping address</div>
+            <div><input type="text"><button>Edit</button></div>
+            <div>Billing address</div>
+            <div><input type="text"><button>Edit</button></div>
+        </div>
+    </body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log('functioning');
+
+            /*$.fn.animateButton = function(buttona, buttonb, info, field) {
+
+                $(buttona).click(function() {
+                    $(info).hide();
+                    $(field).animate({width:'show'}, 350);
+                    $(buttona).hide();
+                    $(buttonb).animate({width:'show'}), 350);
+                    console.log('clicked');
+                });
+
+                $(buttonb).click(function() {
+                var str = $(field).val();
+                var str2 = $(info).val();
+                $(info).text(str);
+                $(info).show();
+                $(field).animate({width: 'hide'}, 350);
+                $(buttona).show(200);
+                $(buttonb).hide();
+                console.log('clicked');
+                });
+
+                console.log("function working");
+            }*/
+
+
+            $("#field1").hide();
+            $("#button1b").hide();
+            $("#field2").hide();
+            $("#button2b").hide();
+
+
+            //Animate stuff
+            $("#button1a").click(function() {
+                $("#info1").hide();
+                $("#field1").animate({width: 'show'}, 350);
+                $("#button1a").hide();
+                $("#button1b").animate({width: 'show'}, 350);
+                console.log('clicked');
+            });
+            
+            $("#button1b").click(function() {
+                var str = $("#field1").val();
+                var str2 = $("#info1").val();
+                $("#info1").text(str);
+                $("#info1").show();
+                $("#field1").animate({width: 'hide'}, 350);
+                $("#button1a").show(200);
+                $("#button1b").hide();
+                console.log('clicked');
+            });
+
+
+            /*$("#buttona").click(function() {
+                $("#info1").hide();
+                $("#field1").animate({width: 'show'}, 350);
+                $("#button1a").hide();
+                $("#button1b").animate({width: 'show'}, 350);
+                console.log('clicked');
+            });
+            
+            $("#button1b").click(function() {
+                var str = $("#field1").val();
+                var str2 = $("#info1").val();
+                $("#info1").text(str);
+                $("#info1").show();
+                $("#field1").animate({width: 'hide'}, 350);
+                $("#button1a").show(200);
+                $("#button1b").hide();
+                console.log('clicked');
+            });*/
+
+        });
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script>
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     var firebaseConfig = {
+      apiKey: "AIzaSyCs59A6L5jovGzusswqyU834QF0aR_ArFg",
+        authDomain: "team38smallnlocal.firebaseapp.com",
+      databaseURL: "https://team38smallnlocal-default-rtdb.firebaseio.com",
+      projectId: "team38smallnlocal",
+       storageBucket: "team38smallnlocal.appspot.com",
+      messagingSenderId: "850338400544",
+      appId: "1:850338400544:web:1390907581d4761e08ef45",
+      measurementId: "G-G3R4Z16DQ1"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+
+     //Database
+     database = firebase.database();
+     var ref = database.ref('Accounts');
+
+     ref.on('value', gotData, errData);
+
+     var username1;
+     var firstName1;
+     var lastName1;
+     var email1;
+     var shippingAddress1;
+     var billingAddress1;
+
+
+
+     function gotData(data) {
+         console.log(data);
+         var AccountName = data.val();
+         var keys = Object.keys(AccountName);
+         var k = keys;
+         username1 = AccountName[k].Username;
+         firstName1 = AccountName[k].FirstName;
+         console.log(username1);
+         console.log(firstName1);
+         return(username1);
+     }
+
+
+    //Set the data in the browser
+    setInterval(() => {
+        $("#info1").text(username1);
+        console.log("The username is " + username1);
+
+        $("#info2").text(firstName1);        
+    }, 1000);
+
+
+
+
+
+     ////////////////////////////////////////////////////////////////
+
+     //retrieve values
+     /*function gotData(data) {
+         console.log(data);
+         var AccountName = data.val();
+         var keys = Object.keys(AccountName);
+         console.log(keys);
+         for (var i = 0; i < keys.length; i++) {
+             var k = keys[i];
+             var username = AccountName[k].Username;
+             var email = AccountName[k].Email;
+             var firstName = AccountName[k].FirstName;
+             var lastName = AccountName[k].LastName;
+             var shippingAddress = AccountName[k].ShippingAddress;
+             var billingAddress = AccountName[k].BillingAddress;
+             console.log("//////////Retrieval loop:");
+             console.log(username);
+             console.log(email);
+             console.log(firstName);
+             console.log(lastName);
+             console.log(shippingAddress);
+             console.log(billingAddress);
+             username1 = username;
+             firstName1 = firstName;
+             lastName1 = lastName;
+             email1 = email;
+             shippingAddress1 = shippingAddress;
+             billingAddress1 = billingAddress;
+             console.log("//////////Retrieval complete.");
+             console.log("In loop: " + username1);
+             
+         }
+    }*/
+    
+    
+
+
+    ///////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+     ///////////////////////////////////////////////////////////////////
+
+
+
+     function errData(err) {
+         console.log('Error!');
+         console.log(err);
+     }
+
+
+
+     
+
+     /*function writeUserData(username, firstName, lastName, email, shippingAddress, billingAddress) {
+         firebase.database().ref('Accounts/' + userID).set({
+             Username: username,
+             FirstName: firstName,
+             LastName: lastName,
+             ShippingAddress: shippingAddress,
+             BillingAddress: billingAddress,
+             Email: email,
+             
+         })
+     }*/
+
+     function errData(err) {
+         console.log('Error!');
+         console.log(err);
+     }
+</script>
+</html>
