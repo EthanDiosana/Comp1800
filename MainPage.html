@@ -1,113 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Small N' Local</title>
+        <meta charset="utf-8">
+    </head>
+    <body id="background">
+        <div id="mainGrid">
+            <div id="navBarGrid">
+                <div class="hideWhenSmall" style="grid-column-start: 1;">ACC</div>
+                <div style="padding-left: 30px;"><h1 style="font-size: 150%;">Small N' Local</h1></div>
+                <div class="hideWhenSmall"><p1>Bestsellers</p1></div>
+                <div class="hideWhenSmall">NEW!</div>
+                <div class="hideWhenSmall">On Sale</div>  
+                <div><input type="text" style="width: 20vw;"></div>
+                <div class="hideWhenSmall">CART</div>
+                <div class="showWhenSmall">HMENU</div>
+            </div>
+            <div id="iconCategoriesGrid">
+                <div><img style="align-content: center;" class="imageSize" src="Circle.png"></img></div>
+                <div><img style="align-content: center;" class="imageSize" src="Circle.png"></img></div>
+                <div><img style="align-content: center;" class="imageSize" src="Circle.png"></img></div>
+            </div>
+            <div id="recommendedGrid">
+                <div id="recommendedGridTop">From stores near you:</div>
+                <div id="recommendedGridBottom">
+                    <div>
+                        <img class="imageSize2" src="Pholder.png" alt="aaa"> 
+                        <div>$00.00</div>
+                    </div>
+                    <div>
+                        <img class="imageSize2" src="Pholder.png" alt="aaa">
+                        <div>$00.00</div>
+                    </div>
+                    <div>
+                        <img class="imageSize2" src="Pholder.png" alt="aaa"> 
+                        <div>$00.00</div>
+                    </div>
+                    <div>
+                        <img class="imageSize2" src="Pholder.png" alt="aaa">
+                        <div>$00.00</div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-    <title>SMALL N LOCAL MAIN PAGE</title>
-  </head>
-  <body>
-
-    <!--Nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Small N' Local</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" size="120">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
-      </div>
-    </nav>
-    <h1>See small and local businesses near you</h1>
+    </body>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .imageSize {
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imageSize2 {
+            display: block;
+            height: 190px;
+            width: 190px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gridBox {
+            border: 1px solid black;
+        }
+
+        #background {
+            background-color: antiquewhite;
+        }
+
+        #mainGrid {
+            display: grid;
+            grid-template-rows: 10vh 0vh 25vh 55vh;
+        }
+
+        #navBarGrid {
+            color: white;
+            background-color: green;
+            grid-row-start: 1;
+            display: grid;
+            grid-template-columns: 20px minmax(200px, 1.5fr) minmax(80px, 1fr) minmax(50px, 1fr) minmax(100px, 1fr) minmax(200px, 1.5fr) 1fr;
+            text-align: left;
+            align-content: center;
+            height: 65%;
+        }
+
+        #categoriesBarGrid {
+            border: 1px solid black;
+            grid-row-start: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            align-content: center;
+        }
+
+        #iconCategoriesGrid {
+            border: 1px solid black;
+            grid-row-start: 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-content: center;
+        }
+
+        #recommendedGrid {
+            border: 1px solid black;
+            grid-row-start: 4;
+            display: grid;
+            grid-template-rows: 1fr 5fr;
+       }
+
+       #recommendedGridTop {
+           background-color: grey;
+       }
+
+       #recommendedGridBottom{
+           background-color: aquamarine;
+           display: grid;
+           border: 1px solid black;
+           grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+       }
+
+        #footer {
+            background-color: green;
+            grid-row-start: 1;
+            width: 100vw;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #navBarGrid {
+                grid-template-columns: minmax(200px, 1fr) minmax(100px, 2fr) minmax(50px, 2fr);
+            }
+
+            .hideWhenSmall {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .showWhenSmall {
+                display: none;
+            }
+        }
 
 
-    <!--Input bar-->
-    <div class="input-group input-group-lg">
-      <span class="input-group-text" id="inputGroup-sizing-lg">Your location</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-    </div>
-
-    <h3>Small and local businesses in British Columbia, Canada</h3>
-
-    <!--Card grid-->
-    <div class="card-group">
-        <div class="card">
-          <img src="honey.jpg" class="card-img-top" alt="..." height="350px">
-          <div class="card-body">
-            <h5 class="card-title">Wild Honey</h5>
-            <p class="card-text">$5.99 <br> Fresh honey straight from the bee farm!</p>
-            <p class="card-text"><small class="text-muted">Burnaby, BC</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="stoys.jpg" class="card-img-top" alt="..." height="350px">
-          <div class="card-body">
-            <h5 class="card-title">Custom Made Stuffed Toys</h5>
-            <p class="card-text">$34.99 <br> Custom made stuffed toys.</p>
-            <p class="card-text"><small class="text-muted">Richmond, BC</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="sweater.jpg" class="card-img-top" alt="..." height="350px">
-          <div class="card-body">
-            <h5 class="card-title">Knit Sweaters</h5>
-            <p class="card-text">$59.99 <br> Custom fluffy sweaters, made to fit any size.</p>
-            <p class="card-text"><small class="text-muted">Coquitlam, BC</small></p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2020 Copyright: SmallN'Local.com
-          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
-      
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    -->
-  </body>
+    </style>
 </html>

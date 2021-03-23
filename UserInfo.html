@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Account Page</title>
+        <meta charset="utf-8">
+    </head>
+    <body id="body">
+        <div>
+            <div><h1>Your Account</h1></div>
+            <div>
+                <form>
+                    <label for="uName" id="uNameLabel">Username: </label>
+                    <br>
+                    <input type="text" id="uName" name="uName">
+                </form>
+                <form>
+                    <label for="fName">First Name: </label>
+                    <br>
+                    <input type="text" id="fName" name="fName">
+                </form>
+                <form>
+                    <label for="lName">Last Name: </label>
+                    <br>
+                    <input type="text" id="lName" name="lName">
+                </form>
+                <button id="saveButton">Done</button>
+                <button id="loadButton">Load</button>
+            </div>
+        </div>
+    </body>
+
+
+
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script>
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     var firebaseConfig = {
+      apiKey: "AIzaSyCs59A6L5jovGzusswqyU834QF0aR_ArFg",
+        authDomain: "team38smallnlocal.firebaseapp.com",
+      databaseURL: "https://team38smallnlocal-default-rtdb.firebaseio.com",
+      projectId: "team38smallnlocal",
+       storageBucket: "team38smallnlocal.appspot.com",
+      messagingSenderId: "850338400544",
+      appId: "1:850338400544:web:1390907581d4761e08ef45",
+      measurementId: "G-G3R4Z16DQ1"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+     var firestore = firebase.firestore();
+
+     //create reference to firestore
+     const docRef =  firestore.doc("Accounts/aqs1lv852uwoCZB7009P");
+    
+     //Create query selectors for page elements
+     const uNameField = document.querySelector("#uName");
+     const fNameField = document.querySelector("#fName");
+     const lNameField = document.querySelector("#lName");
+     const doneButton = document.querySelector("#saveButton");
+     const loadButton = document.querySelector("#loadButton");
+
+     //Create event listener for button click
+     doneButton.addEventListener("click", function() {
+         const textToSave = uNameField.value;
+         const textToSave2 = fNameField.value;
+         const textToSave3 = lNameField.value;
+         console.log("Setting " + textToSave + " as Username");
+         console.log("Setting " + textToSave2 + " as FirstName");
+         console.log("Setting " + textToSave3 + " as LastName");
+         docRef.set( {
+             Username: textToSave,
+             FirstName: textToSave2,
+             LastName: textToSave3
+         }).then(function() {
+             console.log("Info saved!");
+             alert("Info saved!");
+         }).catch(function (error) {
+             console.log("Got an error: ", error);
+         });
+     });
+     /*
+     loadButton.addEventListener("click", function() {
+         docRef.get().then(function(doc) {
+             if(doc && doc.exists) {
+                 const myData = doc.data();
+                 uNameField.value = myData.Username;
+                 fNameField.value = myData.FirstName;
+                 lNameField.value = myData.LastName;
+                 console.log("Loaded values");           
+             }
+         });
+     });
+     */
+
+     docRef.get().then(function(doc) {
+             if(doc && doc.exists) {
+                 const myData = doc.data();
+                 uNameField.value = myData.Username;
+                 fNameField.value = myData.FirstName;
+                 lNameField.value = myData.LastName;
+                 console.log("Loaded values");           
+             }
+            })
+
+</script>
+
+</html>
