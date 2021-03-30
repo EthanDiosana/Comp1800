@@ -89,31 +89,18 @@
         }
 
         .gridBox {
-            border: 1px solid black;
         }
 
         #background {
-            background-color: antiquewhite;
+            background-color: #f3eff5;
         }
 
         #mainGrid {
             display: grid;
-            grid-template-rows: 10vh 0vh 25vh 55vh;
-        }
-
-        #navBarGrid {
-            color: white;
-            background-color: green;
-            grid-row-start: 1;
-            display: grid;
-            grid-template-columns: 20px minmax(200px, 1.5fr) minmax(80px, 1fr) minmax(50px, 1fr) minmax(100px, 1fr) minmax(200px, 1.5fr) 1fr;
-            text-align: left;
-            align-content: center;
-            height: 65%;
+            grid-template-rows: auto 0vh 25vh auto;
         }
 
         #categoriesBarGrid {
-            border: 1px solid black;
             grid-row-start: 2;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -122,7 +109,7 @@
         }
 
         #iconCategoriesGrid {
-            border: 1px solid black;
+
             grid-row-start: 3;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -130,20 +117,23 @@
         }
 
         #recommendedGrid {
-            border: 1px solid black;
+
             grid-row-start: 4;
             display: grid;
             grid-template-rows: 1fr 5fr;
        }
 
        #recommendedGridTop {
-           background-color: grey;
+           background-color: #3F7D20;
+           Color: white;
+           font-size: 1em;
+           height: 50px;
        }
 
        #recommendedGridBottom{
-           background-color: aquamarine;
+           background-color: #f3eff5;
            display: grid;
-           border: 1px solid black;
+
            grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
        }
 
@@ -153,32 +143,16 @@
             width: 100vw;
         }
 
-        @media only screen and (max-width: 600px) {
-            #navBarGrid {
-                grid-template-columns: minmax(200px, 1fr) minmax(100px, 2fr) minmax(50px, 2fr);
-            }
-
-            .hideWhenSmall {
-                display: none;
-            }
-        }
-
-        @media only screen and (min-width: 600px) {
-            .showWhenSmall {
-                display: none;
-            }
-        }
-
         .topnav {
   overflow: hidden;
-  background-color: #4CAF50;
+  background-color: #72B01D;
   position: relative;
 }
 
     .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #f3eff5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -186,12 +160,12 @@
     }
 
     .topnav a:hover {
-    background-color: #ddd;
+    background-color: #72B01D;
     color: black;
     }
 
     .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #72B01D;
     color: white;
     }
 
