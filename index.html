@@ -1,260 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Small N' Local</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body id="background">
-        <div id="mainGrid">
-            <!-- Header Navigation Bar -->
-            <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Small N' Local</a>
-                <a href="#news">Bestsellers</a>
-                <a href="#contact">NEW!</a>
-                <a href="#about">On Sale</a>
-                <div class="search-container responsive">
-                <form action="/action_page.php">
+
+<head>
+    <title>Small N' Local</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="background">
+    <div id="mainGrid">
+        <!-- Header Navigation Bar -->
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Small N' Local</a>
+            <a href="#news" class="active">Bestsellers</a>
+            <a href="#contact" class="active">NEW!</a>
+            <a href="#about" class="active">On Sale</a>
+            <div class="search-container responsive">
+                <form action="/action_page.php" class="active">
                     <input id="searchBar" type="text" placeholder="Search.." name="search">
                     <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                </div>
-                <img src="images/Profile image.png" class= "responsive" id="profileImage" alt="Image was not able to load">
-                <img src="images/shoppingcart.png" class= "responsive" id="shoppingCartImage" alt="Image was not able to load">
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            </div>
+            <img src="images/Profile image.png" class="responsive" id="profileImage" alt="Image was not able to load">
+            <img src="images/shoppingcart.png" class="responsive" id="shoppingCartImage"
+                alt="Image was not able to load">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-                </a>
-            </div>
-      <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>
+            </a>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
 
-            <div id="iconCategoriesGrid">
-                <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
-                <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
-                <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
-            </div>
-            <div id="recommendedGrid">
-                <div id="recommendedGridTop">From stores near you:</div>
-                <div id="recommendedGridBottom">
-                    <div>
-                        <img class="imageSize2" src="images/Pholder.png" alt="aaa"> 
-                        <div>$00.00</div>
-                    </div>
-                    <div>
-                        <img class="imageSize2" src="images/Pholder.png" alt="aaa">
-                        <div>$00.00</div>
-                    </div>
-                    <div>
-                        <img class="imageSize2" src="images/Pholder.png" alt="aaa"> 
-                        <div>$00.00</div>
-                    </div>
-                    <div>
-                        <img class="imageSize2" src="images/Pholder.png" alt="aaa">
-                        <div>$00.00</div>
-                    </div>
+        <div id="iconCategoriesGrid">
+            <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
+            <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
+            <div><img style="align-content: center;" class="imageSize" src="images/Circle.png"></img></div>
+        </div>
+        <div id="recommendedGrid">
+            <div id="recommendedGridTop">From stores near you:</div>
+            <div id="recommendedGridBottom">
+                <div>
+                    <img class="imageSize2" src="images/Pholder.png" alt="aaa">
+                    <div>$00.00</div>
+                </div>
+                <div>
+                    <img class="imageSize2" src="images/Pholder.png" alt="aaa">
+                    <div>$00.00</div>
+                </div>
+                <div>
+                    <img class="imageSize2" src="images/Pholder.png" alt="aaa">
+                    <div>$00.00</div>
+                </div>
+                <div>
+                    <img class="imageSize2" src="images/Pholder.png" alt="aaa">
+                    <div>$00.00</div>
                 </div>
             </div>
-
         </div>
-    </body>
-    <style>
 
-        * {
-            padding: 0;
-            margin: 0;
-        }
+    </div>
+</body>
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script src="scripts/un_imp_feats.js"></script>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
 
-        .imageSize {
-            display: block;
-            height: 100px;
-            width: 100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .imageSize {
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        .imageSize2 {
-            display: block;
-            height: 190px;
-            width: 190px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .imageSize2 {
+        display: block;
+        height: 190px;
+        width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        .gridBox {
-        }
+    .gridBox {}
 
-        #background {
-            background-color: #f3eff5;
-        }
+    #background {
+        background-color: #f3eff5;
+    }
 
-        #mainGrid {
-            display: grid;
-            grid-template-rows: auto 0vh 25vh auto;
-        }
+    #mainGrid {
+        display: grid;
+        grid-template-rows: auto 0vh 25vh auto;
+    }
 
-        #categoriesBarGrid {
-            grid-row-start: 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            text-align: center;
-            align-content: center;
-        }
+    #categoriesBarGrid {
+        grid-row-start: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        align-content: center;
+    }
 
-        #iconCategoriesGrid {
+    #iconCategoriesGrid {
 
-            grid-row-start: 3;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            align-content: center;
-        }
+        grid-row-start: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+    }
 
-        #recommendedGrid {
+    #recommendedGrid {
 
-            grid-row-start: 4;
-            display: grid;
-            grid-template-rows: 1fr 5fr;
-       }
+        grid-row-start: 4;
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+    }
 
-       #recommendedGridTop {
-           background-color: #3F7D20;
-           Color: white;
-           font-size: 1em;
-           height: 50px;
-       }
+    #recommendedGridTop {
+        background-color: #72B01D;
+        Color: white;
+        font-size: 1em;
+        height: 50px;
+    }
 
-       #recommendedGridBottom{
-           background-color: #f3eff5;
-           display: grid;
+    #recommendedGridBottom {
+        background-color: #f3eff5;
+        display: grid;
 
-           grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-       }
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
 
-        #footer {
-            background-color: green;
-            grid-row-start: 1;
-            width: 100vw;
-        }
+    #footer {
+        background-color: green;
+        grid-row-start: 1;
+        width: 100vw;
+    }
 
-        .topnav {
-  overflow: hidden;
-  background-color: #72B01D;
-  position: relative;
-}
+    .topnav { 
+        overflow: hidden;
+        background-color:#3F7D20;
+        position: relative;
+    }
 
     .topnav a {
-    float: left;
-    display: block;
-    color: #f3eff5;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+        float: left;
+        display: block;
+        color: #f3eff5;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
     }
 
     .topnav a:hover {
-    background-color: #72B01D;
-    color: black;
+        background-color: #3F7D20;
+        color: black;
     }
 
     .topnav a.active {
-    background-color: #72B01D;
-    color: white;
+        background-color: #3F7D20;
+        color: white;
     }
 
     .topnav .icon {
-    display: none;
+        display: none;
     }
 
-    .search-container{
+    .search-container {
         margin-top: 13px;
         margin-left: 3%;
         display: inline-block;
         width: 50%;
     }
 
-    #searchBar{
+    #searchBar {
         width: 83.5%;
     }
 
-    #shoppingCartImage{
+    #shoppingCartImage {
         width: 40px;
-    float: right;
+        float: right;
         margin-top: 4px;
         right: 6%;
     }
 
-    #profileImage{
+    #profileImage {
         width: 30px;
-    float: right;
+        float: right;
         right: 12%;
         margin-top: 9px;
     }
 
     @media screen and (max-width: 1061px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
 
 
-    @media screen and (max-width: 555px) {
-        .search-container{
-        margin-left: 2%;
-    }
+        @media screen and (max-width: 555px) {
+            .search-container {
+                margin-left: 2%;
+            }
 
-        #shoppingCartImage{
-        margin-top: 15px;
-        width: 25px;
-    }
+            #shoppingCartImage {
+                margin-top: 15px;
+                width: 25px;
+            }
 
-    #profileImage{
-        width: 19.25px;
-        margin-top: 18px;
-    }
+            #profileImage {
+                width: 19.25px;
+                margin-top: 18px;
+            }
 
-    #thirdTableCell {
+            #thirdTableCell {
                 width: 25%;
 
             }
+        }
+
+
+        @media screen and (max-width: 1061px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+
+            .topnav.responsive img {
+                float: none;
+                display: none;
+                text-align: left;
+            }
+
+
+            .search-container.responsive {
+                margin-bottom: 2%;
+                width: 50%;
+            }
+        }
     }
+</style>
 
-
-    @media screen and (max-width: 1061px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-
-    .topnav.responsive img {
-        float: none;
-        display: none;
-        text-align: left;
-    }
-
-
-    .search-container.responsive{
-        margin-bottom: 2%;
-        width: 50%;
-    }
-    }}
-
-
-    </style>
 </html>
