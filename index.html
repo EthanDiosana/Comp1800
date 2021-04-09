@@ -24,11 +24,11 @@
         <!-- Header Navigation Bar -->
         <div class="topnav" id="myTopnav">
             <a href="#home" class="active">Small N' Local</a>
-            <a href="#news">Bestsellers</a>
-            <a href="#contact">NEW!</a>
-            <a href="#about">On Sale</a>
+            <a href="#news" class="active">Bestsellers</a>
+            <a href="#contact" class="active">NEW!</a>
+            <a href="#about" class="active">On Sale</a>
             <div class="search-container responsive">
-                <form action="/action_page.php">
+                <form action="/action_page.php" class="active">
                     <input id="searchBar" type="text" placeholder="Search.." name="search">
                     <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
                 </form>
@@ -109,6 +109,8 @@
 
     </div>
 </body>
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script src="scripts/un_imp_feats.js"></script>
 <style>
     * {
         padding: 0;
@@ -207,7 +209,7 @@
     }
 
     #recommendedGridTop {
-        background-color: #3F7D20;
+        background-color: #72B01D;
         Color: white;
         font-size: 1em;
         height: 50px;
@@ -226,9 +228,9 @@
         width: 100vw;
     }
 
-    .topnav {
+    .topnav { 
         overflow: hidden;
-        background-color: #72B01D;
+        background-color:#3F7D20;
         position: relative;
     }
 
@@ -243,12 +245,12 @@
     }
 
     .topnav a:hover {
-        background-color: #72B01D;
+        background-color: #3F7D20;
         color: black;
     }
 
     .topnav a.active {
-        background-color: #72B01D;
+        background-color: #3F7D20;
         color: white;
     }
 
@@ -290,24 +292,7 @@
             float: right;
             display: block;
         }
-        #carouselExampleIndicators {
-        width: 240px;
-        height: auto;
-       margin-top: 30px;
-    }
-    .rightCategory{
-        width: 220px;
-        height: 180px;
-        margin-top: 15px;
-        
-    }
 
-    .leftCategory{
-        width: 220px;
-        height: 180px;
-        margin-top: 15px;
-    }
-    }
 
         @media screen and (max-width: 555px) {
             .search-container {
@@ -355,13 +340,20 @@
                 text-align: left;
             }
 
-
             .search-container.responsive {
                 margin-bottom: 2%;
                 width: 50%;
             }
         }
     
+</style>
+
+            .search-container.responsive {
+                margin-bottom: 2%;
+                width: 50%;
+            }
+        }
+    }
 </style>
 
 </html>
