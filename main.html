@@ -9,12 +9,14 @@
 
   <!-- Bootstrap, Firebase AuthUI -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
   <!-- Optional styles and scripts of your own -->
   <link rel="stylesheet" href="styles/jeffstyle.css">
+  <link rel="stylesheet" href="styles/navigation_bar_style.css">
 
 </head>
 
@@ -24,27 +26,26 @@
   <!-- The following is HTML for layout -->
   <!-------------------------------------->
   <!-- Header Navigation Bar -->
-  <!-- Header Navigation Bar -->
   <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Small N' Local</a>
-    <a href="#news" class="active">Bestsellers</a>
-    <a href="#contact" class="active">NEW!</a>
-    <a href="#about" class="active">On Sale</a>
+    <a href="index.html">Small N' Local</a>
+    <a href="#BestSellers" class="active">Bestsellers</a>
+    <a href="#New" class="active">NEW!</a>
+    <a href="#OnSale" class="active">On Sale</a>
     <div class="search-container responsive">
-      <form action="/action_page.php">
-        <input id="searchBar" type="text" placeholder="Search.." name="search">
-        <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <form>
+            <input id="searchBar" type="text" placeholder="Search.." name="search">
+            <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+        </form>
     </div>
-    <div id="cartCount1"><span id="cartCount"></span>
-    </div>
-    <img src="images/Profile image.png" class="responsive" id="profileImage" alt="Image was not able to load">
-    <img src="images/shoppingcart.png" class="responsive" id="shoppingCartImage" alt="Image was not able to load"
-      onclick="location.href='cart.html'; updateCart()" ;>
+    <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+            id="profileImage" alt="Image was not able to load"></a>
+    <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+            id="shoppingCartImage" alt="Image was not able to load"></a>
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
+        <i class="fa fa-bars"></i>
     </a>
-  </div>
+</div>
 
 
   <script src="scripts/jquery-3.6.0.min.js"></script>
