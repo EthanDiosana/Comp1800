@@ -18,33 +18,30 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="styles/navigation_bar_style.css">
-
 </head>
 
 <body id="background">
     <div id="mainGrid">
         <!-- Header Navigation Bar -->
-  <div class="topnav" id="myTopnav">
-    <a href="index.html">Small N' Local</a>
-    <a href="#BestSellers" class="active">Bestsellers</a>
-    <a href="#New" class="active">NEW!</a>
-    <a href="#OnSale" class="active">On Sale</a>
-    <div class="search-container responsive">
-        <form>
-            <input id="searchBar" type="text" placeholder="Search.." name="search">
-            <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
-            id="profileImage" alt="Image was not able to load"></a>
-    <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
-            id="shoppingCartImage" alt="Image was not able to load"></a>
-
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Small N' Local</a>
+            <a href="#news" class="active">Bestsellers</a>
+            <a href="#contact" class="active">NEW!</a>
+            <a href="#about" class="active">On Sale</a>
+            <div class="search-container responsive">
+                <form action="/action_page.php" class="active">
+                    <input id="searchBar" type="text" placeholder="Search.." name="search">
+                    <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                 <div id="cartCount1"><span id="cartCount"></span></div>
+            </div>
+            <img src="images/Profile image.png" class="responsive" id="profileImage" alt="Image was not able to load">
+            <img src="images/shoppingcart.png" class="responsive" id="shoppingCartImage"
+                alt="Image was not able to load" onclick="location.href='cart.html'; updateCart()" ;>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -96,9 +93,9 @@
         <div id="recommendedGrid">
             
             <div id="recommendedGridTop">Select your city: 
-                <a href="#" class="btn btn-warning" id="" onclick="all()">Show all</a>
-                <a href="#" class="btn btn-danger" id="" onclick="burnaby()">Burnaby</a>
-                <a href="#" class="btn btn-primary" id="" onclick="vancouver()">Vancouver</a>
+                <a  class="btn btn-warning" id="" onclick="all()">Show all</a>
+                <a class="btn btn-danger" id="" onclick="burnaby()">Burnaby</a>
+                <a  class="btn btn-primary" id="" onclick="vancouver()">Vancouver</a>
              </div>
             <div id="recommendedGridBottom">
                 <div id="index1">
@@ -117,7 +114,7 @@
                               <td><span class = "bigText" id="productPrice1"></span></td>
                             </tr>
                           </table></p>
-                          <a class="btn btn-success"  onclick="clickFunc1()">Add to cart</a>
+                          <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc1()">Add to cart</a>
                         </div>
                       </div>
                 </div>
@@ -137,7 +134,7 @@
                                 <td><span class = "bigText" id="productPrice2"></span></td>
                               </tr>
                             </table></p>
-                            <a href="#" class="btn btn-success"  onclick="clickFunc2()">Add to cart</a>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc2()">Add to cart</a>
                         </div>
                       </div>
                 </div>
@@ -157,7 +154,7 @@
                                 <td><span class = "bigText" id="productPrice3"></span></td>
                               </tr>
                             </table></p>
-                            <a href="#" class="btn btn-success"  onclick="clickFunc3()">Add to cart</a>
+                            <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc3()">Add to cart</a>
                         </div>
                       </div>
                 </div>
@@ -177,7 +174,7 @@
                                 <td><span class = "bigText" id="productPrice4"></span></td>
                               </tr>
                             </table></p>
-                            <a href="#" class="btn btn-success"  onclick="clickFunc4()">Add to cart</a>
+                            <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc4()">Add to cart</a>
                         </div>
                       </div>
                 </div>
@@ -197,7 +194,7 @@
                                 <td><span class = "bigText" id="productPrice5">$</span></td>
                               </tr>
                             </table></p>
-                            <a href="#" class="btn btn-success"  onclick="clickFunc5()">Add to cart</a>
+                            <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc5()">Add to cart</a>
                         </div>
                       </div>
                 </div>
@@ -217,7 +214,7 @@
                                 <td><span class = "bigText" id="productPrice6">$</span></td>
                               </tr>
                             </table></p>
-                            <a href="#" class="btn btn-success"  onclick="clickFunc6()">Add to cart</a>
+                            <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc6()">Add to cart</a>
                         </div>
                       </div>
                 </div>

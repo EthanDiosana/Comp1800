@@ -24,7 +24,7 @@ $( document ).ready(function() {
 });
 
 function vancouver(){
-    alert("test");
+    
     var item1 = db.collection("Products").doc("ProductList1").data().City;
     var item2 = db.collection("Products").doc("ProductList2").data().City;
     var item3 = db.collection("Products").doc("ProductList3").data().City;
@@ -64,7 +64,7 @@ function vancouver(){
     }
 }
 function burnaby(){
-    alert("test");
+    
     var item1 = db.collection("Products").doc("ProductList1").data().City;
     var item2 = db.collection("Products").doc("ProductList2").data().City;
     var item3 = db.collection("Products").doc("ProductList3").data().City;
@@ -103,7 +103,7 @@ function burnaby(){
     }
 }
 function all(){
-    alert("test");
+   
     document.getElementById("index1").style.display = "block";
     document.getElementById("index2").style.display = "block";
     document.getElementById("index3").style.display = "block";
