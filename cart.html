@@ -26,7 +26,7 @@
     <!-- Header Navigation Bar -->
  <!-- Header Navigation Bar -->
     <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Small N' Local</a>
+        <a href="#home" onclick="location.href='index.html'" class="active">Small N' Local</a>
         <a href="#news">Bestsellers</a>
         <a href="#contact">NEW!</a>
         <a href="#about">On Sale</a>
@@ -61,12 +61,11 @@
         <div class="pt-4 wish-list">
 
           <h5 class="mb-4">Your Cart</h5>
-
-          <div class="row mb-4">
+<!-- Start of cards -->
+          <div class="row mb-4" id = "cartItem1">
             <div class="col-md-5 col-lg-3 col-xl-3">
               <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
                   <div class="mask">
-                   
                     <div class="mask rgba-black-slight"></div>
                   </div>
               </div>
@@ -77,8 +76,6 @@
                   <div>
                     <h5 id="cartProductName1"></h5>
                     <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy1"></span></p>
-                    <p class="mb-2 text-muted text-uppercase small">Color: blue</p>
-                    
                   </div>
                   <div>
                     <div class="def-number-input number-input safari_only mb-0 w-100">
@@ -92,7 +89,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a onclick="remove1()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                    <a onclick="remove1(); hide1()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
                   </div>
                     <p class="mb-0"><strong><span id="cartProductPrice1"></span></strong></p >
@@ -100,10 +97,13 @@
               </div>
             </div>
           </div>
+          <!-- End of cards -->
           <hr class="mb-4">
-          <div class="row mb-4">
+          <!-- End of cards -->
+          <div class="row mb-4" id = "cartItem2">
             <div class="col-md-5 col-lg-3 col-xl-3">
               <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                
                
                   <div class="mask">
                     <div class="mask rgba-black-slight"></div>
@@ -117,7 +117,7 @@
                   <div>
                     <h5 id="cartProductName2"></h5>
                     <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy2"></span></p>
-                    <p class="mb-2 text-muted text-uppercase small">Color: red</p>
+                    
                   
                   </div>
                   <div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a onclick="remove2()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                    <a onclick="remove2(); hide2()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
                   </div>
                     <p class="mb-0"><strong><span id="cartProductPrice2"></span></strong></p>
@@ -140,6 +140,166 @@
               </div>
             </div>
           </div>
+          <hr class="mb-4" >
+          <!-- Start of cards -->
+          <div class="row mb-4" id = "cartItem3">
+            <div class="col-md-5 col-lg-3 col-xl-3">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+            
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-9 col-xl-9">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 id="cartProductName3"></h5>
+                    <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy3"></span></p>
+                  </div>
+                  <div>
+                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                      <button onclick="plus3();total()"
+                        class="minus decrease"></button>
+                      <div class="largerText" id="cartProductAmount3"></div>
+                      <button onclick="minus3();total()"
+                        class="plus increase"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a onclick="remove3(); hide3()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                  </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice3"></span></strong></p >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of cards -->
+          <hr class="mb-4">
+          <!-- Start of cards -->
+          <div class="row mb-4" id = "cartItem4">
+            <div class="col-md-5 col-lg-3 col-xl-3">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+              
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-9 col-xl-9">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 id="cartProductName4"></h5>
+                    <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy4"></span></p>
+                  </div>
+                  <div>
+                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                      <button onclick="plus4();total()"
+                        class="minus decrease"></button>
+                      <div class="largerText" id="cartProductAmount4"></div>
+                      <button onclick="minus4();total()"
+                        class="plus increase"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a onclick="remove4(); hide4()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                  </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice4"></span></strong></p >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of cards -->
+          <hr class="mb-4">
+          <!-- Start of cards -->
+          <div class="row mb-4" id = "cartItem5">
+            <div class="col-md-5 col-lg-3 col-xl-3">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+           
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-9 col-xl-9">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 id="cartProductName5"></h5>
+                    <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy5"></span></p>
+                  </div>
+                  <div>
+                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                      <button onclick="plus5();total()"
+                        class="minus decrease"></button>
+                      <div class="largerText" id="cartProductAmount5"></div>
+                      <button onclick="minus5();total()"
+                        class="plus increase"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a onclick="remove5(); hide5()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                  </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice5"></span></strong></p >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of cards -->
+          <hr class="mb-4" >
+          <!-- Start of cards -->
+          <div class="row mb-4" id = "cartItem6">
+            <div class="col-md-5 col-lg-3 col-xl-3">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+           
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-9 col-xl-9">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 id="cartProductName6"></h5>
+                    <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy6"></span></p>
+                  </div>
+                  <div>
+                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                      <button onclick="plus6();total()"
+                        class="minus decrease"></button>
+                      <div class="largerText" id="cartProductAmount6"></div>
+                      <button onclick="minus6();total()"
+                        class="plus increase"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a onclick="remove6(); hide6()" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                  </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice6"></span></strong></p >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of cards -->
+
+
+
+          <!-- End of cards -->
         </div>
       </div>
       <!-- Card -->
@@ -173,7 +333,7 @@
             </li>
           </ul>
 
-          <button type="button" class="btn btn-primary btn-block">Go to checkout</button>
+          <button onclick="checkOut()" type="button" class="btn btn-primary btn-block">Go to checkout</button>
 
         </div>
       </div>
