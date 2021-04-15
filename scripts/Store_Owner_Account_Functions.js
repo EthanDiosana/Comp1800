@@ -35,7 +35,7 @@ $("#addNewProductButton").click(function () {
     };
 
 });
-
+ 
 
 // The code below retrieves data from the database and displays them in a table.
 function showInventory() {
@@ -148,7 +148,7 @@ $("#saveButton").click(function () {
         let y = $('.productNameCounting' + counter).html();
         let z = $(".inputPriceNumber" + counter).val();
 
-        inventoryRef.doc("product" + counter).set({
+        inventoryRef.doc("product" + counter).update({
             amount: x,
             name: y,
             price: z,
@@ -169,6 +169,3 @@ $("#saveButton").click(function () {
     $("#addNewProductButton").css("display", "block");
     $("#updateInventoryAndPrice").css("display", "block");
 });
-
-
-
