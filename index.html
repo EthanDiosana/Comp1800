@@ -5,6 +5,7 @@
     <title>Small N' Local</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/indexstyle.css">
+    <link rel="stylesheet" href="styles/navigation_bar_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,25 +24,26 @@
 <body id="background">
     <div id="mainGrid">
         <!-- Header Navigation Bar -->
-        <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Small N' Local</a>
-            <a href="#news" class="active">Bestsellers</a>
-            <a href="#contact" class="active">NEW!</a>
-            <a href="#about" class="active">On Sale</a>
-            <div class="search-container responsive">
-                <form action="/action_page.php" class="active">
-                    <input id="searchBar" type="text" placeholder="Search.." name="search">
-                    <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-                 <div id="cartCount1"><span id="cartCount"></span></div>
-            </div>
-            <img src="images/Profile image.png" class="responsive" id="profileImage" alt="Image was not able to load">
-            <img src="images/shoppingcart.png" class="responsive" id="shoppingCartImage"
-                alt="Image was not able to load" onclick="location.href='cart.html'; updateCart()" ;>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Small N' Local</a>
+        <a href="#BestSellers" class="active">Bestsellers</a>
+        <a href="#New" class="active">NEW!</a>
+        <a href="#OnSale" class="active">On Sale</a>
+        <div class="search-container responsive">
+            <form>
+                <input id="searchBar" type="text" placeholder="Search.." name="search">
+                <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+            </form>
         </div>
+        <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+                id="profileImage" alt="Image was not able to load"></a>
+        <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+                id="shoppingCartImage" alt="Image was not able to load"></a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
