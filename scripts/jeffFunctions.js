@@ -699,7 +699,10 @@ const cartRef6 = db.collection('Cart').doc('Item6');
     document.getElementById("totalCostTax").innerHTML = totalCostTax.toFixed(2);
 }
 total();
+<<<<<<< HEAD
 
 function checkOut(){
     alert('Checkout');
 }
+=======
+>>>>>>> 1be75769088611654e2e8a2c740eead8b55fea6d

@@ -305,9 +305,5 @@ body {
     #profileImage {
         width: 25px;
         margin-top: 0px;
-    }
-
-    #thirdTableCell {
-        width: 25%;
-    }    
+    }  
 }

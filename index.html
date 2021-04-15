@@ -17,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/navigation_bar_style.css">
 
 </head>
 
@@ -24,24 +25,33 @@
     <div id="mainGrid">
         <!-- Header Navigation Bar -->
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Small N' Local</a>
-            <a href="#news" class="active">Bestsellers</a>
-            <a href="#contact" class="active">NEW!</a>
-            <a href="#about" class="active">On Sale</a>
+            <a href="index.html">Small N' Local</a>
+            <a href="#BestSellers" class="active">Bestsellers</a>
+            <a href="#New" class="active">NEW!</a>
+            <a href="#OnSale" class="active">On Sale</a>
             <div class="search-container responsive">
-                <form action="/action_page.php" class="active">
+                <form>
                     <input id="searchBar" type="text" placeholder="Search.." name="search">
-                    <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
+                    <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
                 </form>
                  <div id="cartCount1"><span id="cartCount"></span></div>
             </div>
+<<<<<<< HEAD
             <img src="images/Profile image.png" class="responsive" id="profileImage" alt="Image was not able to load">
             <img src="images/shoppingcart.png" class="responsive" id="shoppingCartImage"
                 alt="Image was not able to load" onclick="location.href='cart.html'; updateCart()" ;>
+=======
+            <a href="login.html" id="profileImageLink"><img src="images/Profile image.png"
+                    class="responsive" id="profileImage" alt="Image was not able to load"></a>
+            <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+                    id="shoppingCartImage" alt="Image was not able to load"></a>
+
+>>>>>>> 1be75769088611654e2e8a2c740eead8b55fea6d
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
+
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -57,7 +67,7 @@
 
         <div id="iconCategoriesGrid">
             <div class="leftCategory">
-                <img  class="leftCategory border" src="images/local2.jpg" alt="image error">
+                <img class="leftCategory border" src="images/local2.jpg" alt="image error">
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -237,5 +247,163 @@
     <script src="scripts/jquery-3.6.0.min.js"></script>
     <script src="scripts/un_imp_feats.js"></script>
 </body>
+<<<<<<< HEAD
+=======
+
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script src="scripts/un_imp_feats.js"></script>
+<script src="scripts/firebase_api_SmallNLocal.js"></script>
+<script src="scripts/index_script.js"></script>
+
+
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .imageSize {
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imageSize2 {
+        display: block;
+        height: 190px;
+        width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #background {
+        background-color: #f3eff5;
+    }
+
+    #mainGrid {
+        display: grid;
+        grid-template-rows: auto 0vh 35vh auto;
+    }
+
+    #categoriesBarGrid {
+        grid-row-start: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        align-content: center;
+    }
+
+    #iconCategoriesGrid {
+        grid-row-start: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        height: auto;
+        background-image: url("images/wood.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: black 1px solid;
+    }
+
+    #carouselExampleIndicators {
+        width: 340px;
+        height: 250px;
+        grid-column: 2;
+        margin-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+
+    }
+
+    .border {
+        border: solid black 1px;
+    }
+
+    .rightCategory {
+        width: 380px;
+        height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        border-radius: 10px;
+        margin-top: 2px;
+
+    }
+
+    .leftCategory {
+        width: 380px;
+        height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        border-radius: 10px;
+        margin-top: 2px;
+
+    }
+
+    #recommendedGrid {
+
+        grid-row-start: 4;
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+    }
+
+    #recommendedGridTop {
+        background-color: #72B01D;
+        Color: white;
+        font-size: 1em;
+        height: 50px;
+    }
+
+    #recommendedGridBottom {
+        background-color: #f3eff5;
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+
+    #footer {
+        background-color: green;
+        grid-row-start: 1;
+        width: 100vw;
+    }
+
+
+
+    @media screen and (max-width: 1061px) {
+        #carouselExampleIndicators {
+            width: 240px;
+            height: auto;
+            margin-top: 30px;
+        }
+
+        .rightCategory {
+            width: 220px;
+            height: 180px;
+            margin-top: 15px;
+
+        }
+
+        .leftCategory {
+            width: 220px;
+            height: 180px;
+            margin-top: 15px;
+        }
+    }
+</style>
+
+
+
+</style>
+>>>>>>> 1be75769088611654e2e8a2c740eead8b55fea6d
 
 </html>
