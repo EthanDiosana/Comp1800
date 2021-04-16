@@ -1,12 +1,7 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+
 .logo{
     display: none;
 }
-    
-
 
 .imageSize {
     display: block;
@@ -36,24 +31,6 @@
     font-weight: bold;
 }
 
-#index1{
-margin: 0;
-}
-#index2{
-    margin: 0;
-}
-#index3{
-    margin: 0;
-}
-#index4{
-    margin: 0;
-}
-#index5{
-    margin: 0; 
-}
-#index6{
-    margin: 0;
-}
 
 #cartCount1{
     width:30px;

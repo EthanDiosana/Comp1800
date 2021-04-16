@@ -1,12 +1,5 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
+// The function below is called upon when the element that contains 
+// the id = "manageInventoryButton" is clicked.
 $(".manageInventoryButton").click(function () {
     if ($("#manageInventoryPage").css("display") == "none") {
         $("#manageInventoryPage").css("display", "block");
@@ -16,7 +9,8 @@ $(".manageInventoryButton").click(function () {
 });
 
 
-
+// The function below is called upon when the element that contains 
+// the id = "homeButton" is clicked.
 $(".homeButton").click(function () {
     if ($("#homeContainer").css("display") == "none") {
         $("#homeContainer").css("display", "block");
@@ -26,7 +20,8 @@ $(".homeButton").click(function () {
 });
 
 
-
+// The function below is called upon when the element that contains 
+// the id = "addNewProductionButton" is clicked.
 $("#addNewProductButton").click(function () {
     if ($("#addInventoryContainer").css("display") == "none") {
         $("#addInventoryContainer").css("display", "block");
@@ -36,6 +31,9 @@ $("#addNewProductButton").click(function () {
 
 });
 
+// The method below retrieves the user's name from the database collection
+// currentUserName and sets the element "userNameContainer" to contain
+// the user's name.
 function retrieveUserName() {
     db.collection("currentUserName").get()
         .then(function (snap) {
@@ -46,6 +44,7 @@ function retrieveUserName() {
         });
 }
  
+// When the page loads, it calls the retrieveUserName().
 window.onload = function(){
     retrieveUserName();
 }
@@ -64,15 +63,11 @@ function showInventory() {
         });
 }
 
-
 showInventory();
 $("#saveButton").css("display", "none");
 
-
 var inventoryCounterRef = db.collection("InventoryCounter");
-
 var inventoryRef = db.collection("Inventory");
-
 
 // When the user clicks on the "Submit" button, the code below adds an item's information (name, amount, and price) 
 // and writes the data to the database. It also updates the counter value by increments of 1.
@@ -113,9 +108,6 @@ $("#submitButton").click(function () {
 });
 
 
-
-
-
 // When the user clicks on the "Update Inventory/Price" button, the code below will
 // retrieve the data from the data base and displays them in a table but with a counter for each value
 // and an input tag in the inventory and price column (for the user to write in to update the inventory listed).
@@ -149,8 +141,6 @@ $("#updateInventoryAndPrice").click(function () {
 });
 
 
-
-
 //The code below is for when the user finishes updating the inventory list and wants to save it.
 // The code overwrites the fields in the "'product' + counter" documents, which acts like an "update".
 $("#saveButton").click(function () {
@@ -170,7 +160,6 @@ $("#saveButton").click(function () {
     });
 
     $(".tableInventory").empty();
-
 
     $(".tableInventory").append("<th class='productNameHeading'>Product Name</th>");
     $(".tableInventory").append("<th class='inventoryHeading'>Inventory</th>");
