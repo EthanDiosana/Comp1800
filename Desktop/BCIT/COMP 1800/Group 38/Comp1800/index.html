@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Small N' Local</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Bootstrap, Firebase AuthUI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="styles/navigation_bar_style_for_index.css">
+    <link rel="stylesheet" href="styles/indexstyle.css">
+
+</head>
+
+<body id="background">
+    <div id="mainGrid">
+
+        <!-- Header Navigation Bar -->
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" id="logo">Small N' Local</a>
+            <a href="#BestSellers" class="active">Bestsellers</a>
+            <a href="#New" class="active">NEW!</a>
+            <a href="#OnSale" class="active">On Sale</a>
+            <div class="search-container responsive">
+                <form>
+                    <input id="searchBar" type="text" placeholder="Search.." name="search">
+                    <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <a href="login.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+                    id="profileImage" alt="Image was not able to load"></a>
+            <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+                    id="shoppingCartImage" alt="Image was not able to load"></a>
+            <div id="cartCount1"><span id="cartCount"></span></div>
+
+            <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
+        <img class="logo" src="images/logo.png" alt="image error">
+        <div id="iconCategoriesGrid">
+            <div class="leftCategory">
+                <img class="leftCategory border" src="images/local2.jpg" alt="image error">
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 carousel" src="images/logo.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100 carousel" src="images/bread.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carousel" src="images/honey.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="rightCategory">
+                <img class="rightCategory border" src="images/local.jpg" alt="image error">
+            </div>
+        </div>
+
+        <div id="recommendedGrid">
+
+            <div id="recommendedGridTop">Select your city:
+                <a class="btn btn-warning" id="sort" onclick="showAll()">Show all</a>
+                <a class="btn btn-danger" id="sort" onclick="burnaby()">Burnaby</a>
+                <a class="btn btn-primary" id="sort" onclick="vancouver()">Vancouver</a>
+            </div>
+            <div id="recommendedGridBottom">
+                <div id="index1">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage1" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName1"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy1"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice1"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc1()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index2">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage2" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName2"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy2"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice2"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc2()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index3">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage3" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName3"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy3"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice3"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc3()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage4" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName4"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy4"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice4"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc4()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index5">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage5" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName5"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy5"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice5"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc5()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="index6">
+                    <div class="card" style="width: 18rem;">
+                        <img class="itemImage" id="productImage6" src="images/Pholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <table>
+                                <tr>
+                                    <td><span class="bigText" id="productName6"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="soldBy6"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>$<span class="bigText" id="productPrice6"></span></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <a class="btn btn-success" id="necklaceButton" onclick="clickFunc6()">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, JQuery, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+    <!-- Link to the api keys for your firebase project -->
+    <script src="scripts/firebase_api_SmallNLocal.js"></script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="scripts/index_script.js"></script>
+    <script src="scripts/jeffFunctions.js"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/un_imp_feats.js"></script>
+    <script src="scripts/nav_bar_functions.js"></script>
+</body>
+
+</html>

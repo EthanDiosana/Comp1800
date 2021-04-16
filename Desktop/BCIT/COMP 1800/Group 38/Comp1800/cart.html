@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Project</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
+
+  <!-- Bootstrap, Firebase AuthUI -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Optional styles and scripts of your own -->
+  <link rel="stylesheet" href="styles/jeffstyle.css">
+  <link rel="stylesheet" href="styles/navigation_bar_style.css">
+
+</head>
+
+<body>
+
+  <!-- Header Navigation Bar -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" id="logo">Small N' Local</a>
+    <a href="#BestSellers" class="active">Bestsellers</a>
+    <a href="#New" class="active">NEW!</a>
+    <a href="#OnSale" class="active">On Sale</a>
+    <div class="search-container responsive">
+      <form>
+        <input id="searchBar" type="text" placeholder="Search.." name="search">
+        <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+      </form>
+      <div id="cartCount1"><span id="cartCount"></span></div>
+    </div>
+    <a href="login.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive" id="profileImage"
+        alt="Image was not able to load"></a>
+    <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+        id="shoppingCartImage" alt="Image was not able to load"></a>
+
+    <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+
+  <!--Section: Block Content-->
+  
+  <section class="empty">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-8">
+
+        <!-- Card -->
+        <div class="mb-3">
+          <div class="pt-4 wish-list">
+
+            <h5 class="mb-4">Your Cart</h5>
+            <!-- Start of cards -->
+            <div class="row mb-4" id="cartItem1">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName1"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy1"></span></p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus1();total()" class="minus decrease"></button>
+                        <div class="largerText" id="cartProductAmount1"></div>
+                        <button onclick="minus1();total()" class="plus increase"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove1(); hide1()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice1"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of cards -->
+            <hr class="mb-4">
+            <!-- End of cards -->
+            <div class="row mb-4" id="cartItem2">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+
+
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName2"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy2"></span></p>
+
+
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus2();total()" class="minus"></button>
+                        <div class="largerText" id="cartProductAmount2"></div>
+                        <button onclick="minus2();total()" class="plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove2(); hide2()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice2"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <!-- Start of cards -->
+            <div class="row mb-4" id="cartItem3">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName3"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy3"></span></p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus3();total()" class="minus decrease"></button>
+                        <div class="largerText" id="cartProductAmount3"></div>
+                        <button onclick="minus3();total()" class="plus increase"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove3(); hide3()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice3"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of cards -->
+            <hr class="mb-4">
+            <!-- Start of cards -->
+            <div class="row mb-4" id="cartItem4">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName4"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy4"></span></p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus4();total()" class="minus decrease"></button>
+                        <div class="largerText" id="cartProductAmount4"></div>
+                        <button onclick="minus4();total()" class="plus increase"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove4(); hide4()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice4"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of cards -->
+            <hr class="mb-4">
+            <!-- Start of cards -->
+            <div class="row mb-4" id="cartItem5">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName5"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy5"></span></p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus5();total()" class="minus decrease"></button>
+                        <div class="largerText" id="cartProductAmount5"></div>
+                        <button onclick="minus5();total()" class="plus increase"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove5(); hide5()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice5"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of cards -->
+            <hr class="mb-4">
+            <!-- Start of cards -->
+            <div class="row mb-4" id="cartItem6">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+
+                  <div class="mask">
+                    <div class="mask rgba-black-slight"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 id="cartProductName6"></h5>
+                      <p class="mb-3 text-muted text-uppercase small">Sold by: <span id="cartSoldBy6"></span></p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <button onclick="plus6();total()" class="minus decrease"></button>
+                        <div class="largerText" id="cartProductAmount6"></div>
+                        <button onclick="minus6();total()" class="plus increase"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a onclick="remove6(); hide6()" type="button"
+                        class="card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i>
+                        Remove item </a>
+                    </div>
+                    <p class="mb-0"><strong><span id="cartProductPrice6"></span></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of cards -->
+
+
+
+            <!-- End of cards -->
+          </div>
+        </div>
+        <!-- Card -->
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4">
+
+        <!-- Card -->
+        <div class="mb-3">
+          <div class="pt-4">
+
+            <h5 class="mb-3">The total amount of</h5>
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                Order amount
+                <span id="totalCost"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                Shipping
+                
+                <span>Free</span>
+                
+              </li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Pickup
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Delivery
+                </label>
+              </div>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                <div>
+                  <strong>Total with tax </strong>
+                </div>
+                <span id="totalCostTax"><strong></strong></span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false" onclick="checkout();">
+              Checkout
+            </button>
+           
+        <!-- Card -->
+
+        <!-- Card -->
+    
+
+    <!-- Card -->
+
+
+    <!--Grid column-->
+
+
+    <!-- Grid row -->
+
+  </section>
+  <!--Section: Block Content-->
+ 
+</div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><b>SmallN'local</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Order confirmed.
+        <br><br>
+        Thank you for your purchase!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='index.html'">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, JQuery, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+  <!-- Link to the api keys for your firebase project -->
+  <script src="scripts/firebase_api_SmallNLocal.js"></script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="scripts/index_script.js"></script>
+  <script src="scripts/jeffFunctions.js"></script>
+  <script src="scripts/un_imp_feats.js"></script>
+  <script src="scripts/nav_bar_functions.js"></script>
+
+</body>
+
+</html>

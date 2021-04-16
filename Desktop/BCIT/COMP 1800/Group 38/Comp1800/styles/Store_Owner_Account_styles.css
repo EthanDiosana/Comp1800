@@ -1,0 +1,204 @@
+#tabs {
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+body {
+    background-image: url("../images/Backgroud-img.jpg");
+    height: 100%;
+}
+
+
+#bodyContainer {
+    border: 6px solid greenyellow;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 1%;
+    position: relative;
+    height: 100%;
+}
+
+#welcomeText {
+    text-align: center;
+    font-size: 25pt;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+#gridTemplate {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+#gridRecentSales {
+    margin-bottom: 7%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+
+#recentSalesText {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-left: 2.5%;
+}
+
+#recentSalesTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 1.5em;
+}
+
+#accountSummaryTable {
+    width: 100%;
+    font-weight: bold;
+}
+
+#accountSummaryText {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+#recentSalesContainer {
+    background-color: #DCDCDC;
+    padding: 2.5%;
+    overflow-x: scroll;
+}
+
+#accountSummaryContainer {
+    background-color: #DCDCDC;
+    padding: 2.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#tipsAndTricksContainer {
+    background-color: #DCDCDC;
+    padding: 2.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+
+/** Below are the style section for the manage Inventory page **/
+
+#manageInventoryPage {
+    background-color: #DCDCDC;
+    display: none;
+    padding-bottom: 1.5%;
+}
+
+#inventoryText {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+
+
+#inventoryHeader {
+    width: 100%;
+}
+
+#firstTableCell {
+    width: 70%;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+
+#thirdTableCell {
+    width: 15%;
+    text-align: center;
+}
+
+#secondTableCell {
+    width: 10%;
+}
+
+.productNameHeading {
+    width: 45%;
+    padding-left: 3%;
+}
+
+.inventoryHeading {
+    width: 33%;
+}
+
+
+
+.inputInventoryNumber {
+    width: 55%;
+}
+
+.inputPriceNumber {
+    width: 85%;
+}
+
+
+.productName {
+    padding-left: 3%;
+}
+
+#pageNumber {
+    margin-top: 4%;
+}
+
+#footerStyle {
+    position: absolute;
+    width: 100%;
+    margin-top: 25%;
+}
+
+.tableInventory {
+    width: 100%;
+}
+
+
+
+/** The code below is for the add inventory page **/
+
+#addInventoryTable {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border-bottom-width: thick;
+}
+
+
+#addInventoryTable tr {
+    border: 1px solid transparent;
+}
+
+
+#addInventoryTable td {
+    border: 15px solid transparent;
+}
+
+#addInventoryHeading {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#submitButton {
+    margin-left: 50%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#addInventoryContainer {
+    background-color: gainsboro;
+    display: none;
+}
+
+
+
+.changeInventory {
+    background-color: aqua;
+}
+
+#fourthTableCell {
+    width: 5%;
+}
+
+.productNamePadding {
+    padding-left: 3%;
+}

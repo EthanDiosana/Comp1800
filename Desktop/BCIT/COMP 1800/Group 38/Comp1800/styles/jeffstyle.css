@@ -1,0 +1,36 @@
+.row{
+    padding: 20px;
+}
+.largerText{
+    font-size: 30px;
+}
+#image1{
+    width:200px;
+    height: 200px;
+    border:solid black 4px;
+    background-size: cover;
+}
+#image2{
+    width:200px;
+    height: 200px;
+    border:solid black 4px;
+}
+#cartCount1{
+    width:30px;
+    height:30px;
+    margin-top: -32px;
+    margin-left: 94%;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    
+}
+
+
+.card-img-top{
+    width: 200px;
+    height: 200px;
+}
+
+

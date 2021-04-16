@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Account Page</title>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap, Firebase AuthUI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Optional styles and scripts of your own -->
+  <link rel="stylesheet" href="styles/navigation_bar_style_for_userInfo.css">
+  <link rel="stylesheet" href="styles/userInfo_styles.css">
+</head>
+
+<body id="body">
+  <!-- Header Navigation Bar -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Small N' Local</a>
+    <a href="#BestSellers" class="active">Bestsellers</a>
+    <a href="#New" class="active">NEW!</a>
+    <a href="#OnSale" class="active">On Sale</a>
+    <div class="search-container responsive">
+      <form>
+        <input id="searchBar" type="text" placeholder="Search.." name="search">
+        <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+        id="profileImage" alt="Image was not able to load"></a>
+    <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+        id="shoppingCartImage" alt="Image was not able to load"></a>
+
+    <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <!-- Body -->
+  </div>
+  <div>
+    <div id="margine">
+      <h1>Your Account</h1>
+    </div>
+    <div id="margine2">
+      <form>
+        <label for="uName" id="uNameLabel">Change Username: </label>
+        <br>
+        <input type="text" class="accountInput" id="uName" name="uName">
+      </form>
+      <form>
+        <label for="fName">Change First Name: </label>
+        <br>
+        <input type="text" class="accountInput" id="fName" name="fName">
+      </form>
+      <form>
+        <label for="lName">Change Last Name: </label>
+        <br>
+        <input type="text" class="accountInput" id="lName" name="lName">
+      </form>
+      <form>
+        <label for="lName">Change Shipping Address: </label>
+        <br>
+        <input type="text" class="accountInput" id="lSA" name="BAfield">
+      </form>
+      <form>
+        <label for="lName">Change Billing Address: </label>
+        <br>
+        <input type="text" class="accountInput" id="lBA" name="SAfield">
+      </form>
+      <button id="saveButton">Done</button>
+    </div>
+  </div>
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <script src="scripts/un_imp_feats.js"></script>
+  <script src="scripts/firebase_api_SmallNLocal.js"></script>
+  <script src="scripts/userInfo_functions.js"></script>
+  <script src="scripts/nav_bar_functions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/Store_Owner_Account_styles.css">
+    <link rel="stylesheet" href="styles/navigation_bar_style.css">
+</head>
+
+<body>
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
+
+    <!-- Header Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" id="logo">Small N' Local</a>
+        <a href="#BestSellers" class="active">Bestsellers</a>
+        <a href="#New" class="active">NEW!</a>
+        <a href="#OnSale" class="active">On Sale</a>
+        <div class="search-container responsive">
+            <form>
+                <input id="searchBar" type="text" placeholder="Search.." name="search">
+                <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+                id="profileImage" alt="Image was not able to load"></a>
+        <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
+                id="shoppingCartImage" alt="Image was not able to load"></a>
+
+        <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <div id="tabs">
+        <button class="btn btn-success homeButton" href="#" role="button">Home</button>
+        <button class="btn btn-success manageInventoryButton" type="button">Manage Inventory</button>
+        <input class="btn btn-success profileButton" type="button" value="Profile"
+            onclick="window.location='UserInfo.html';" />
+    </div>
+
+
+
+    <div id="bodyContainer">
+        <div id="homeContainer">
+            <p id="welcomeText">Welcome <span id="userNameContainer"></span> to your Account Page</p>
+            <div id="gridTemplate">
+                <div id="gridRecentSales">
+                    <div id="recentSalesContainer">
+                        <p id="recentSalesText">Your Recent Sales:</p>
+
+                        <table id="recentSalesTable">
+                            <tr>
+                                <th>Product
+                                    <hr class="my-4">
+                                </th>
+                                <th>Transaction Date
+                                    <hr class="my-4">
+                                </th>
+                                <th>Amount
+                                    <hr class="my-4">
+                                </th>
+                                <th>Profit
+                                    <hr class="my-4">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Custom Clay Pots</td>
+                                <td>20-January-2021</td>
+                                <td>3</td>
+                                <td>$30.00</td>
+                            </tr>
+                            <tr>
+                                <td>Hand-Crafted Jewelry</td>
+                                <td>16-January-2021</td>
+                                <td>7</td>
+                                <td>$7.00</td>
+                            </tr>
+                            <tr>
+                                <td>5-Scented Candles</td>
+                                <td>10-January-2021</td>
+                                <td>2</td>
+                                <td>$10.00</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div id="gridAccountSummary">
+                    <div id="accountSummaryContainer">
+                        <p id="accountSummaryText">Your Account Summary:</p>
+                        <table id="accountSummaryTable">
+                            <tr>
+                                <td>Last Active Login:</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td>Last Ordered Fullfilled</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td>Emails waiting for response:</td>
+                                <td> 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div id="tipsAndTricksContainer">
+                        <p style="font-size: 18pt; font-weight: bold;">Tips and Tricks</p>
+                        <div><img src="images/packaging.png" style="width:10%; float:left"
+                                alt="Image might have been moved">
+                            <p>Learning packaging tips to ensure your product dets to your customers safely while saving
+                                money</p>
+                        </div>
+                        <br>
+                        <div style="margin-top: 2%;"><img src="images/pickup truck.png" style="width:10%; float:left"
+                                alt="Image might have been moved">
+                            <p>Want faster deliveries? Come check out this list of trusted courier companies to improve
+                                you and your
+                                customers shopping experience</p>
+                        </div>
+                        <br>
+                        <div><img src="images/life savers.png" style="width:10%; float:left"
+                                alt="Image might have been moved">
+                            <p>Feel like your drowning in orders and debt? Come see our life-saving business articles
+                                that cna help you
+                                swim to the shore of success!</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="manageInventoryPage">
+            <table id="inventoryHeader">
+                <tr>
+                    <td id="firstTableCell">
+                        <p id="inventoryText">Inventory</p>
+                    </td>
+                    <td id="thirdTableCell"><button type="button" class="btn btn-success" id="addNewProductButton">Add
+                            New Product</button></td>
+                    <td id="secondTableCell"><button type="button" class="btn btn-success"
+                            id="updateInventoryAndPrice">Update
+                            Inventory/Price</button>
+                    </td>
+                    <td id='fourthTableCell'><button type='button' class="btn btn-success" id='saveButton'>Save</button>
+                </tr>
+            </table>
+
+
+            <table class="tableInventory">
+                <thead>
+                    <th class="productNameHeading">Product Name</th>
+                    <th class="inventoryHeading">Inventory</th>
+                    <th class="priceHeading">Price ($CAD)</th>
+                </thead>
+            </table>
+        </div>
+
+
+        <div id="addInventoryContainer">
+            <h4 id="addInventoryHeading">Input Product Information Below:</h4>
+            <table id="addInventoryTable">
+                <tr class="addInventoryTableRow">
+                    <th>Product Name:</th>
+                    <td><input type="text" id="addInventoryTableProductName"></td>
+                </tr>
+                <tr class="addInventoryTableRow">
+                    <th>Amount:</th>
+                    <td><input type="number" id="productAmount"></td>
+                </tr>
+                <tr class="addInventoryTableRow">
+                    <th>Price:</th>
+                    <td><input type="number" id="productPrice"></td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-success" id="submitButton">Submit & Save</button>
+        </div>
+    </div>
+
+
+    <!-- Below is for the footer -->
+    <!-- Copyright -->
+    <footer id="footerStyle">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">SmallN'Local.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+    <script src="scripts/firebase_api_SmallNLocal.js"></script>
+
+    <script src="app.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/Store_Owner_Account_Functions.js"></script>
+    <script src="scripts/un_imp_feats.js"></script>
+
+</body>
+
+</html>
