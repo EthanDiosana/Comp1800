@@ -35,7 +35,20 @@ $("#addNewProductButton").click(function () {
     };
 
 });
+
+function retrieveUserName() {
+    db.collection("currentUserName").get()
+        .then(function (snap) {
+            snap.forEach(function (doc) {
+                var n = doc.data().name;
+                document.getElementById("userNameContainer").innerText = n;
+            })
+        });
+}
  
+window.onload = function(){
+    retrieveUserName();
+}
 
 // The code below retrieves data from the database and displays them in a table.
 function showInventory() {

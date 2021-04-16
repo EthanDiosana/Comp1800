@@ -26,7 +26,15 @@ var uiConfig = {
                     })
                     .then(function () {
                         console.log("New user added to firestore");
-                        userHasLoggedIn();
+                        userHasLoggedIn();          
+                        updateCurrentUserName(user.displayName);
+                        //This function is to update the data name in the collection "currentUserName"
+                        // with the current logged in user's name.
+                        function updateCurrentUserName() {
+                            db.collection("currentUserName").doc("userName").update({
+                                name: user.displayName
+                            });
+                        }    
                         window.location.assign("index.html"); //re-direct to main.html after signup
                     })
                     .catch(function (error) {
@@ -71,5 +79,12 @@ function userHasLoggedIn() {
         aUserLoggedIn: true
     });
 }
+
+
+
+
+
+
+
 
 

@@ -5,8 +5,10 @@
     <title>Small N' Local</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles/navigation_bar_style_for_index.css">
     <link rel="stylesheet" href="styles/indexstyle.css">
-    <link rel="stylesheet" href="styles/navigation_bar_style.css">
+    <script src="scripts/index_script.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,29 +28,27 @@
     <div id="mainGrid">
         <!-- Header Navigation Bar -->
         <div class="topnav" id="myTopnav">
-            <a href="index.html">Small N' Local</a>
+            <a href="index.html" id="logo">Small N' Local</a>
             <a href="#BestSellers" class="active">Bestsellers</a>
             <a href="#New" class="active">NEW!</a>
             <a href="#OnSale" class="active">On Sale</a>
             <div class="search-container responsive">
-                <form action="/action_page.php" class="active">
+                <form>
                     <input id="searchBar" type="text" placeholder="Search.." name="search">
                     <button id="searchButton" class="active"><i class="fa fa-search"></i></button>
                 </form>
-                <div id="cartCount1"><span id="cartCount"></span></div>
-        
             </div>
-            <a href="Store_User_Account.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
+            <a href="login.html" id="profileImageLink"><img src="images/Profile image.png" class="responsive"
                     id="profileImage" alt="Image was not able to load"></a>
             <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
                     id="shoppingCartImage" alt="Image was not able to load"></a>
-    
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
+            <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
 
-        
+
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -64,7 +64,7 @@
         <img  class="logo" src="images/logo.png" alt="image error">
         <div id="iconCategoriesGrid">
             <div class="leftCategory">
-                <img  class="leftCategory border" src="images/local2.jpg" alt="image error">
+                <img class="leftCategory border" src="images/local2.jpg" alt="image error">
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -96,7 +96,7 @@
                 <img class="rightCategory border" src="images/local.jpg" alt="image error">
             </div>
         </div>
-        
+
         <div id="recommendedGrid">
             
             <div id="recommendedGridTop">Select your city: 
@@ -123,11 +123,11 @@
                           </table></p>
                           <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc1()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div id="index2">
                     <div class="card" style="width: 18rem;">
-                        <img class = "itemImage" id="productImage2" src="images/Pholder.png" alt="Card image cap">
+                        <img class="itemImage" id="productImage2" src="images/Pholder.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <table>
@@ -143,11 +143,11 @@
                             </table></p>
                             <a class="btn btn-success" id="necklaceButton" onclick="clickFunc2()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div id="index3">
                     <div class="card" style="width: 18rem;">
-                        <img class = "itemImage" id="productImage3" src="images/Pholder.png" alt="Card image cap">
+                        <img class="itemImage" id="productImage3" src="images/Pholder.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <table>
@@ -163,11 +163,11 @@
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc3()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div id="index4">
                     <div class="card" style="width: 18rem;">
-                        <img class = "itemImage" id="productImage4" src="images/Pholder.png" alt="Card image cap">
+                        <img class="itemImage" id="productImage4" src="images/Pholder.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <table>
@@ -183,11 +183,11 @@
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc4()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div id="index5">
                     <div class="card" style="width: 18rem;">
-                        <img class = "itemImage" id="productImage5" src="images/Pholder.png" alt="Card image cap">
+                        <img class="itemImage" id="productImage5" src="images/Pholder.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <table>
@@ -203,11 +203,11 @@
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc5()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div id="index6">
                     <div class="card" style="width: 18rem;">
-                        <img class = "itemImage" id="productImage6" src="images/Pholder.png" alt="Card image cap">
+                        <img class="itemImage" id="productImage6" src="images/Pholder.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <table>
@@ -223,7 +223,7 @@
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc6()">Add to cart</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,8 +237,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-         <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
-         <script src="app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="scripts/app.js" defer></script>
     <script src="scripts/firebase_api_jeff.js"></script>
     <script src="scripts/jeffFunctions.js"></script>
     <script src="scripts/jquery-3.6.0.min.js"></script>

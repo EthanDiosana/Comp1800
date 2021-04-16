@@ -175,70 +175,8 @@ display: none;}
     width: 100vw;
 }
 
-.topnav { 
-    overflow: hidden;
-    background-color:#3F7D20;
-    position: relative;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f3eff5;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #3F7D20;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #3F7D20;
-    color: white;
-}
-
-.topnav .icon {
-    display: none;
-}
-
-.search-container {
-    margin-top: 13px;
-    margin-left: 3%;
-    display: inline-block;
-    width: 50%;
-}
-
-#searchBar {
-    width: 83.5%;
-}
-
-#shoppingCartImage {
-    width: 40px;
-    float: right;
-    margin-top: 4px;
-    right: 6%;
-}
-
-#profileImage {
-    width: 30px;
-    float: right;
-    right: 12%;
-    margin-top: 9px;
-}
 
 @media screen and (max-width: 1061px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
     #carouselExampleIndicators {
     width: 220px;
     height: 180px;

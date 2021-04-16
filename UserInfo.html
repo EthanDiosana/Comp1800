@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="styles/navigation_bar_style.css">
+  <link rel="stylesheet" href="styles/navigation_bar_style_for_userInfo.css">
+  <link rel="stylesheet" href="styles/userInfo_styles.css">
 </head>
 
 <body id="body">
@@ -27,7 +28,7 @@
     <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
         id="shoppingCartImage" alt="Image was not able to load"></a>
 
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -48,25 +49,34 @@
   </script>
   </div>
   <div>
-
-    <div class="margine">
+    <div id="margine">
       <h1>Your Account</h1>
     </div>
-    <div class="margine">
+    <div id="margine2">
       <form>
         <label for="uName" id="uNameLabel">Change Username: </label>
         <br>
-        <input type="text" id="uName" name="uName">
+        <input type="text" class="accountInput" id="uName" name="uName">
       </form>
       <form>
         <label for="fName">Change First Name: </label>
         <br>
-        <input type="text" id="fName" name="fName">
+        <input type="text" class="accountInput" id="fName" name="fName">
       </form>
       <form>
         <label for="lName">Change Last Name: </label>
         <br>
-        <input type="text" id="lName" name="lName">
+        <input type="text" class="accountInput" id="lName" name="lName">
+      </form>
+      <form>
+        <label for="lName">Change Shipping Address: </label>
+        <br>
+        <input type="text" class="accountInput" id="lSA" name="BAfield">
+      </form>
+      <form>
+        <label for="lName">Change Billing Address: </label>
+        <br>
+        <input type="text" class="accountInput" id="lBA" name="SAfield">
       </form>
       <form>
         <label for="lName">Change Shipping Address: </label>
@@ -83,15 +93,7 @@
   </div>
 </body>
 
-<style>
-  * {
-    margin: 0px;
-  }
 
-  .margine {
-    margin-left: 10px;
-  }
-</style>
 
 
 

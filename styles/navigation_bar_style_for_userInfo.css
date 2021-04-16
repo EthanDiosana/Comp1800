@@ -84,7 +84,7 @@
         text-align: left;
     }
 
-
+    
     .search-container.responsive {
         margin-bottom: 2%;
         width: 50%;
@@ -102,14 +102,25 @@
     }  
 
     #searchButton{
-        width:14%;
+        width:11%;
     }
 
     #logo{
-        width:34%;
+        width:24%;
     }
 
     #hamburgerMenuIcon{
-        width:10%;
+        width:2%;
+    }
+
+    #myTopnav{
+        transform: scale(2.25);
+        width:45%;
+        margin-top: 2%;
+        margin-left: 27%;
+    }
+    
+    #myTopnav.responsive{
+        margin-top: 15%;
     }
 }

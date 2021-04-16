@@ -120,7 +120,7 @@ remove3();
 remove4();
 remove5();
 remove6();
-document.getElementsByClassName("empty").style.display = "none"
+
 }
 
 function readItem1(){
