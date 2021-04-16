@@ -23,7 +23,7 @@
 
   <!-- Header Navigation Bar -->
   <div class="topnav" id="myTopnav">
-    <a href="index.html">Small N' Local</a>
+    <a href="index.html" id="logo">Small N' Local</a>
     <a href="#BestSellers" class="active">Bestsellers</a>
     <a href="#New" class="active">NEW!</a>
     <a href="#OnSale" class="active">On Sale</a>
@@ -39,7 +39,7 @@
     <a href="cart.html" id="shoppingCartLink"><img src="images/shoppingcart.png" class="responsive"
         id="shoppingCartImage" alt="Image was not able to load"></a>
 
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" id="hamburgerMenuIcon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -385,6 +385,7 @@
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
+  <script src="scripts/index_script.js"></script>
   <script src="scripts/jeffFunctions.js"></script>
   <script src="scripts/un_imp_feats.js"></script>
 
