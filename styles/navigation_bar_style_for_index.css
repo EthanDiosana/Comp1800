@@ -107,6 +107,7 @@
 
     #logo{
         width:34%;
+        font-size: 11pt;
     }
 
     #hamburgerMenuIcon{
@@ -114,13 +115,13 @@
     }
 
     #myTopnav{
-        transform: scale(2.25);
-        width:45%;
+        transform: scale(1.10);
+        width:99%;
         margin-top: 2%;
-        margin-left: 27%;
+        margin-left: 0.5%;
     }
     
     #myTopnav.responsive{
-        margin-top: 15%;
+        margin-left: 3%;
     }
 }

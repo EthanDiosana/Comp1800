@@ -24,85 +24,107 @@ $( document ).ready(function() {
 });
 
 function vancouver(){
-    
-    var item1 = db.collection("Products").doc("ProductList1").data().City;
-    var item2 = db.collection("Products").doc("ProductList2").data().City;
-    var item3 = db.collection("Products").doc("ProductList3").data().City;
-    var item4 = db.collection("Products").doc("ProductList4").data().City;
-    var item5 = db.collection("Products").doc("ProductList5").data().City;
-    var item6 = db.collection("Products").doc("ProductList6").data().City;
-   
-    if(item1=="Burnaby"){
-        document.getElementById("index1").style.display = "none";
-    }else{
-        document.getElementById("index1").style.display = "block";
-    }
-    if(item2=="Burnaby"){
-        document.getElementById("index2").style.display = "none";
-    }else{
-        document.getElementById("index2").style.display = "block";
-    }
-    if(item3=="Burnaby"){
-        document.getElementById("index3").style.display = "none";
-    }else{
-        document.getElementById("index3").style.display = "block";
-    }
-    if(item4=="Burnaby"){
-        document.getElementById("index4").style.display = "none";
-    }else{
-        document.getElementById("index4").style.display = "block";
-    }
-    if(item5=="Burnaby"){
-        document.getElementById("index5").style.display = "none";
-    }else{
-        document.getElementById("index5").style.display = "block";
-    }
-    if(item6=="Burnaby"){
-        document.getElementById("index6").style.display = "none";
-    }else{
-        document.getElementById("index6").style.display = "block";
-    }
+    db.collection("Products").doc("ProductList1").onSnapshot(function(c){   
+        var item1 = c.data().City;
+        if(item1=="Burnaby"){
+            document.getElementById("index1").style.display = "none";
+        }else{
+            document.getElementById("index1").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList2").onSnapshot(function(c){   
+        var item2 = c.data().City; 
+        if(item2=="Burnaby"){
+            document.getElementById("index2").style.display = "none";
+        }else{
+            document.getElementById("index2").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList3").onSnapshot(function(c){   
+        var item3 = c.data().City;
+        if(item3=="Burnaby"){
+            document.getElementById("index3").style.display = "none";
+        }else{
+            document.getElementById("index3").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList4").onSnapshot(function(c){   
+        var item4 = c.data().City; 
+        if(item4=="Burnaby"){
+            document.getElementById("index4").style.display = "none";
+        }else{
+            document.getElementById("index4").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList5").onSnapshot(function(c){   
+        var item5 = c.data().City;
+        if(item5=="Burnaby"){
+            document.getElementById("index5").style.display = "none";
+        }else{
+            document.getElementById("index5").style.display = "block";
+        }
+    }) 
+    db.collection("Products").doc("ProductList6").onSnapshot(function(c){   
+        var item6 = c.data().City;
+        if(item6=="Burnaby"){
+            document.getElementById("index6").style.display = "none";
+        }else{
+            document.getElementById("index6").style.display = "block";
+        }
+    })       
 }
 function burnaby(){
-    
-    var item1 = db.collection("Products").doc("ProductList1").data().City;
-    var item2 = db.collection("Products").doc("ProductList2").data().City;
-    var item3 = db.collection("Products").doc("ProductList3").data().City;
-    var item4 = db.collection("Products").doc("ProductList4").data().City;
-    var item5 = db.collection("Products").doc("ProductList5").data().City;
-    var item6 = db.collection("Products").doc("ProductList6").data().City;
-    if(item1!="Burnaby"){
-        document.getElementById("index1").style.display = "none";
-    }else{
-        document.getElementById("index1").style.display = "block";
-    }
-    if(item2!="Burnaby"){
-        document.getElementById("index2").style.display = "none";
-    }else{
-        document.getElementById("index2").style.display = "block";
-    }
-    if(item3!="Burnaby"){
-        document.getElementById("index3").style.display = "none";
-    }else{
-        document.getElementById("index3").style.display = "block";
-    }
-    if(item4!="Burnaby"){
-        document.getElementById("index4").style.display = "none";
-    }else{
-        document.getElementById("index4").style.display = "block";
-    }
-    if(item5!="Burnaby"){
-        document.getElementById("index5").style.display = "none";
-    }else{
-        document.getElementById("index5").style.display = "block";
-    }
-    if(item6!="Burnaby"){
-        document.getElementById("index6").style.display = "none";
-    }else{
-        document.getElementById("index6").style.display = "block";
-    }
+    db.collection("Products").doc("ProductList1").onSnapshot(function(c){   
+        var item1 = c.data().City;
+        if(item1!="Burnaby"){
+            document.getElementById("index1").style.display = "none";
+        }else{
+            document.getElementById("index1").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList2").onSnapshot(function(c){   
+        var item2 = c.data().City; 
+        if(item2!="Burnaby"){
+            document.getElementById("index2").style.display = "none";
+        }else{
+            document.getElementById("index2").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList3").onSnapshot(function(c){   
+        var item3 = c.data().City;
+        if(item3!="Burnaby"){
+            document.getElementById("index3").style.display = "none";
+        }else{
+            document.getElementById("index3").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList4").onSnapshot(function(c){   
+        var item4 = c.data().City; 
+        if(item4!="Burnaby"){
+            document.getElementById("index4").style.display = "none";
+        }else{
+            document.getElementById("index4").style.display = "block";
+        }
+    })
+     db.collection("Products").doc("ProductList5").onSnapshot(function(c){   
+        var item5 = c.data().City;
+        if(item5!="Burnaby"){
+            document.getElementById("index5").style.display = "none";
+        }else{
+            document.getElementById("index5").style.display = "block";
+        }
+    }) 
+    db.collection("Products").doc("ProductList6").onSnapshot(function(c){   
+        var item6 = c.data().City;
+        if(item6!="Burnaby"){
+            document.getElementById("index6").style.display = "none";
+        }else{
+            document.getElementById("index6").style.display = "block";
+        }
+    })       
 }
-function all(){
+
+function showAll(){
    
     document.getElementById("index1").style.display = "block";
     document.getElementById("index2").style.display = "block";

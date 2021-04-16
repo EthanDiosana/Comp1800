@@ -99,7 +99,7 @@ margin: 0;
 
 #carouselExampleIndicators {
     width: 380px;
-    height: 240px;
+    height: 230px;
     grid-column: 2;
    margin-bottom: 5px;
     margin-right: auto;
@@ -110,7 +110,7 @@ margin: 0;
 }
 
 .carousel{
-    height: 240px;
+    height: 230px;
     border-radius: 10px;
 }
 
@@ -121,7 +121,7 @@ margin: 0;
 
 .rightCategory{
     width: 380px;
-    height: 240px;
+    height: 230px;
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -135,7 +135,7 @@ display: none;}
 
 .leftCategory{
     width: 380px;
-    height: 240px;
+    height: 230px;
     margin-right: auto;
     margin-left: auto;
     display: block;
