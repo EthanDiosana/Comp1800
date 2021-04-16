@@ -269,7 +269,7 @@ display: none;}
         #recommendedGridBottom {
             grid-gap: 20px;
             grid-template-columns: 1fr;
-            margin-bottom: -290%;
+            margin-bottom: -70%;
             font-size: 22px;
         }
         .bigText{
