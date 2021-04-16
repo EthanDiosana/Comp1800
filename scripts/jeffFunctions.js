@@ -113,6 +113,16 @@ function all(){
     
 }
 
+function checkout(){
+remove1();
+remove2();
+remove3();
+remove4();
+remove5();
+remove6();
+document.getElementsByClassName("empty").style.display = "none"
+}
+
 function readItem1(){
     db.collection("Products").doc("ProductList1")
     .onSnapshot(function(c){   

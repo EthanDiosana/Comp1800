@@ -4,6 +4,7 @@
 <head>
     <title>Small N' Local</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="styles/indexstyle.css">
     <link rel="stylesheet" href="styles/navigation_bar_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,7 +61,7 @@
         </script>
 
 
-
+        <img  class="logo" src="images/logo.png" alt="image error">
         <div id="iconCategoriesGrid">
             <div class="leftCategory">
                 <img  class="leftCategory border" src="images/local2.jpg" alt="image error">
@@ -73,13 +74,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/honey.jpg" alt="First slide">
+                        <img class="d-block w-100 carousel" src="images/logo.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100 carousel" src="images/bread.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/bread.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/jam.jpg" alt="Third slide">
+                        <img class="d-block w-100 carousel" src="images/honey.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -99,9 +100,9 @@
         <div id="recommendedGrid">
             
             <div id="recommendedGridTop">Select your city: 
-                <a  class="btn btn-warning" id="" onclick="all()">Show all</a>
-                <a class="btn btn-danger" id="" onclick="burnaby()">Burnaby</a>
-                <a  class="btn btn-primary" id="" onclick="vancouver()">Vancouver</a>
+                <a  class="btn btn-warning" id="sort" onclick="all()">Show all</a>
+                <a class="btn btn-danger" id="sort" onclick="burnaby()">Burnaby</a>
+                <a  class="btn btn-primary" id="sort" onclick="vancouver()">Vancouver</a>
              </div>
             <div id="recommendedGridBottom">
                 <div id="index1">
@@ -117,7 +118,7 @@
                                 <td><span id="soldBy1"></span></td>
                             </tr>
                             <tr>
-                              <td><span class = "bigText" id="productPrice1"></span></td>
+                              <td>$<span class = "bigText" id="productPrice1"></span></td>
                             </tr>
                           </table></p>
                           <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc1()">Add to cart</a>
@@ -137,7 +138,7 @@
                                   <td><span id="soldBy2"></span></td>
                               </tr>
                               <tr>
-                                <td><span class = "bigText" id="productPrice2"></span></td>
+                                <td>$<span class = "bigText" id="productPrice2"></span></td>
                               </tr>
                             </table></p>
                             <a class="btn btn-success" id="necklaceButton" onclick="clickFunc2()">Add to cart</a>
@@ -157,7 +158,7 @@
                                   <td><span id="soldBy3"></span></td>
                               </tr>
                               <tr>
-                                <td><span class = "bigText" id="productPrice3"></span></td>
+                                <td>$<span class = "bigText" id="productPrice3"></span></td>
                               </tr>
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc3()">Add to cart</a>
@@ -177,7 +178,7 @@
                                   <td><span id="soldBy4"></span></td>
                               </tr>
                               <tr>
-                                <td><span class = "bigText" id="productPrice4"></span></td>
+                                <td>$<span class = "bigText" id="productPrice4"></span></td>
                               </tr>
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc4()">Add to cart</a>
@@ -197,7 +198,7 @@
                                   <td><span id="soldBy5"></span></td>
                               </tr>
                               <tr>
-                                <td><span class = "bigText" id="productPrice5">$</span></td>
+                                <td>$<span class = "bigText" id="productPrice5"></span></td>
                               </tr>
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc5()">Add to cart</a>
@@ -217,7 +218,7 @@
                                   <td><span id="soldBy6"></span></td>
                               </tr>
                               <tr>
-                                <td><span class = "bigText" id="productPrice6">$</span></td>
+                                <td>$<span class = "bigText" id="productPrice6"></span></td>
                               </tr>
                             </table></p>
                             <a  class="btn btn-success" id="necklaceButton" onclick="clickFunc6()">Add to cart</a>

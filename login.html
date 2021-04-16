@@ -6,6 +6,7 @@
     <title>My BCIT Project</title>
     <meta name="comp1800 boilerplate code" content="my bcit project" />
     <meta name="author" content="BCIT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap, Firebase AuthUI -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -29,8 +30,9 @@
             background-image: url("images/shoppingbackground2.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100vh;
-            width: auto;
+            height: auto;
+            width: 100%;
+            padding-bottom: 150px;
         }
 
         .container {
@@ -38,11 +40,29 @@
             width: 600px;
             height: 300px;
             border-radius: 20px;
+            
         }
 
         .exit {
             width: 100px;
             filter: hue-rotate(90);
+        }
+         a:hover{
+            filter:contrast(200%);
+        }
+
+        @media only screen and (max-width: 1068px) {
+            .container {
+            backdrop-filter: blur(10px);
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+        }
+        .center {
+          
+            font-size: 35px;
+           
+        }
         }
     </style>
 </head>
@@ -53,7 +73,8 @@
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
 
-    <div><img class="exit" src=images/backgreen2.png></div>
+    <div><a href="index.html"><img src="images/backgreen2.png" class="exit"
+         alt="Image was not able to load"></a></div>
     <div class="container">
         <h1 class="center">Welcome to Small n'Local</h1>
         <div id="firebaseui-auth-container"></div>

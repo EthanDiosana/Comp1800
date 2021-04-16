@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+.logo{
+    display: none;
+}
+    
+
 
 .imageSize {
     display: block;
@@ -19,10 +24,9 @@
     margin-right: auto;
 }
 
-.gridBox {}
 
 .itemImage{
-    width:250px;
+    width:286px;
     height: 250px;
     border: black 1px solid;
     
@@ -83,49 +87,60 @@ margin: 0;
 #iconCategoriesGrid {
     grid-row-start: 3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr;
     align-content: center;
     height: auto;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFbb7YsDlr_nwgH7UHaNYIxIErwjN1cMdJA&usqp=CAU");
+    background-image: url("https://media1.thehungryjpeg.com/thumbs2/ori_3622238_udk791lcr3yuhdcfvkmu6bgkgxg6bjddcld1ownb_summer-fields-landscape-cartoon-countryside-valley-with-green-hills-b.jpg");
     background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
     border: black 1px solid;
 }
 
 #carouselExampleIndicators {
-    width: 340px;
-    height: 250px;
+    width: 380px;
+    height: 240px;
     grid-column: 2;
-   margin-bottom: 10px;
+   margin-bottom: 5px;
     margin-right: auto;
     margin-left: auto;
     display: block;
-   
+    border: black 1px solid;
+    
+}
+
+.carousel{
+    height: 240px;
+    border-radius: 10px;
 }
 
 .border{
     border: solid black 1px;
 }
 
+
 .rightCategory{
     width: 380px;
-    height: 250px;
+    height: 240px;
     margin-right: auto;
     margin-left: auto;
     display: block;
     border-radius: 10px;
-    margin-top: 2px;
-   
 }
+
+
+.modal-backdrop {
+/* bug fix - no overlay */    
+display: none;}
 
 .leftCategory{
     width: 380px;
-    height: 250px;
+    height: 240px;
     margin-right: auto;
     margin-left: auto;
     display: block;
     border-radius: 10px;
-    margin-top: 2px;
+   
     
 }
 
@@ -225,24 +240,76 @@ margin: 0;
         display: block;
     }
     #carouselExampleIndicators {
-    width: 240px;
-    height: auto;
-   margin-top: 15px;
+    width: 220px;
+    height: 180px;
+   
 }
 .rightCategory{
     width: 220px;
     height: 180px;
-    margin-top: 7px;
     
+    
+}
+
+.carousel{
+    height: 180px;
+   
+    width: 220px;
 }
 
 .leftCategory{
     width: 220px;
     height: 180px;
-    margin-top: 7px;
+    
+}
+#recommendedGridBottom {
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr ;
+    margin-bottom: -80%;
+}
+.topnav.responsive {
+    position: relative;
+}
+
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+
+.topnav.responsive img {
+    float: none;
+    display: none;
+    text-align: left;
+}
+
+.search-container.responsive {
+    margin-bottom: 2%;
+    width: 50%;
+}
+.btn-success{
+    color: white;
+}
+#sort{
+    font-size: 20px;
+   
 }
 }
     @media screen and (max-width: 555px) {
+        .logo{
+            display: block;
+            width: 230px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 30px;
+        }
         .search-container {
             margin-left: 2%;
         }
@@ -261,38 +328,50 @@ margin: 0;
             width: 25%;
 
         }
-    }
-
-
-    @media screen and (max-width: 1061px) {
-        .topnav.responsive {
-            position: relative;
+        #recommendedGridBottom {
+            grid-gap: 20px;
+            grid-template-columns: 1fr;
+            margin-bottom: -290%;
+            font-size: 22px;
         }
-
-        .topnav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
+        .bigText{
+            font-size: 30px;
+            font-weight: bold;
         }
-
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
+        .btn{
+            width:200px;
+            height:50px;
+            
         }
-
-
-        .topnav.responsive img {
-            float: none;
+        #necklaceButton{
+            font-size: 25px;
+            color: white;
+        }
+        #recommendedGridTop {
+            grid-template-columns: 1fr;
+            display: grid;
+            grid-gap: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #sort{
+            font-size: 25px;
+            color: white;
+        }
+        #iconCategoriesGrid {
             display: none;
-            text-align: left;
         }
-
-        .search-container.responsive {
-            margin-bottom: 2%;
-            width: 50%;
+        #carouselExampleIndicators {
+        display: none;
+        }
+  
+        .rightCategory{
+          display: none;
+           
+        }
+        
+        .leftCategory{
+          display: none;
         }
     }
-    .btn-success{
-        color: white;
-    }
+   
