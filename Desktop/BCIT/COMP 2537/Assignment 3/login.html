@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question-Ship</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The login page of the Question-Ship website"/>
+    <link rel="stylesheet" href="styles/login_styles.css">
+    <link rel="stylesheet" href="styles/animatedBackground.css">
+  </head>
+  <body>
+    <p id="developerNames">Man Chuen Lee (A01221171), Jeff P (A01070752), Rodnick G (A01001723), Steven G (A01221187)</p>
+    <img src="images/Question-ship.png" alt="Image of Question-Ship logo" id="questionShipLogo">
+    <form id="loginForm">
+        <p id="signInTitle">Sign-In</p>
+        <p id="emailTitle">E-mail address:</p>
+        <input type="text" id="emailInput" placeholder="Please input Email...">
+        <p id="passwordTitle">Password:</p>
+        <input type="text" id="passwordInput" placeholder="Please input Password...">
+        <br>
+        <button id="submitButton">Submit</button>
+        <span id="serverMessage"></span>
+    </form>
+
+
+      <!-- The codes below are for animated background -->
+      <section class="wrapper">
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+      </section> 
+    <!-- The codes above are for animated background -->
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#submit").click(function() {
+            $.ajax({
+                url: "/authenticate",
+                type: "POST",
+                dataType: "JSON",
+                data: { email: $("#email").val(), password: $("#password").val() },
+                success: function(data) {
+                    //console.log("Data returned from server: ", data);
+                    if(data['status'] == "success") {
+                        // redirect
+                        window.location.replace("/profile");
+                    } else {
+                        // show error message
+                        $("#errorMsg").html(data['msg']);
+                    }
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $("body").text(jqXHR.statusText);
+                }
+            });
+        });
+      });
+    </script>
+</body>
+</html>
